@@ -6,7 +6,7 @@ import Lane from './Lane';
 export default function TodoPage() {
   const [todos, setTodos] = useState<TodoItem[]>(() => {
   try {
-    const saved = localStorage.getItem('todos');
+  const saved = localStorage.getItem('todos');
     return saved ? JSON.parse(saved) : [];
   } catch {
     return [];
