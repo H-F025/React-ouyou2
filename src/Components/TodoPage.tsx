@@ -5,13 +5,13 @@ import Lane from './Lane';
 // 最初に保存済みのタスクを読み込む
 export default function TodoPage() {
   const [todos, setTodos] = useState<TodoItem[]>(() => {
-  try {
-  const saved = localStorage.getItem('todos');
-    return saved ? JSON.parse(saved) : [];
-  } catch {
-    return [];
-  }
-});
+    try {
+      const saved = localStorage.getItem('todos');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
