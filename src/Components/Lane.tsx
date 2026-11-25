@@ -6,10 +6,10 @@ interface LaneProps {
   todos: TodoItem[];
   canMovePrev: boolean;
   canMoveNext: boolean;
-  onAdd?: () => void;
   onDelete: (id: string) => void;
   onMove: (id: string, direction: MoveDirection) => void;
   onUpdateText: (id: string, text: string) => void;
+  onAdd?: () => void;
 }
 
 // レーン：ToDo / In Progress / Done 共通。受け取ったタスクを並べるだけ
